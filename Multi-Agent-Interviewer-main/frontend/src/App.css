@@ -1,0 +1,102 @@
+/* --- Global App Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 2.5rem;
+}
+.form-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- THE NEW BUTTON STYLE --- */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 50px; /* Pill shape */
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+}
+.action-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Primary Button (Orange Gradient) */
+.btn-primary {
+  background-image: linear-gradient(45deg, #ff8c42, #fa7328);
+  color: var(--white-color);
+}
+
+/* Dark Button */
+.btn-dark {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.btn-dark:hover {
+  background-color: var(--dark-hover-color);
+}
+
+/* --- THE NEW CARD STYLE --- */
+.card {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  border: 1px solid #eef2f6;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- THE NEW MODAL OVERLAY --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 22, 41, 0.5); /* Darker overlay */
+  backdrop-filter: blur(8px); /* Glassmorphism */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+.modal-content {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScaleUp 0.3s 0.1s forwards;
+}
+
+/* --- Global Animations --- */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeInScaleUp {
+  to { opacity: 1; transform: scale(1); }
+}

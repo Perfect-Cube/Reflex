@@ -1,0 +1,65 @@
+/* src/components/admin/CandidateApplications.css */
+.list-container h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: var(--dark-color);
+}
+
+.candidate-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.candidate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid #eef2f6;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  background-color: var(--white-color);
+  transition: all 0.2s ease-in-out;
+}
+.candidate-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.candidate-info h3 {
+  margin: 0 0 0.25rem 0;
+  color: var(--dark-color);
+}
+.candidate-info span {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.candidate-status {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--white-color);
+  text-transform: capitalize;
+}
+
+.status-started { background-color: var(--primary-color); }
+.status-terminated { background-color: var(--primary-color); }
+.status-completed, .status-interviewed { background-color: #17a2b8; }
+.status-rejected { background-color: var(--danger-color); }
+.status-selected { background-color: var(--success-color); }
+
+.view-details-btn {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.view-details-btn:hover {
+  background-color: var(--dark-hover-color);
+}

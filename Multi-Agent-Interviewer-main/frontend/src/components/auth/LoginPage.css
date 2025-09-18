@@ -1,0 +1,82 @@
+/* auth/LoginPage.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+}
+.login-form {
+  max-width: 420px;
+  width: 100%;
+}
+.login-form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+/* --- NEW AUTH TOGGLE STYLE --- */
+.auth-toggle {
+  display: flex;
+  background-color: #eef2f6;
+  border-radius: 50px;
+  padding: 6px;
+  margin-bottom: 2rem;
+}
+.auth-toggle button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+.auth-toggle button.active {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.login-submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.switch-link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.error-message {
+  color: var(--danger-color);
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}

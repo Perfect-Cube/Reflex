@@ -1,0 +1,28 @@
+/* candidate/CandidateDashboard.css */
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.dashboard-container h1 {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+.application-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.job-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--dark-color);
+}
+.status {
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}

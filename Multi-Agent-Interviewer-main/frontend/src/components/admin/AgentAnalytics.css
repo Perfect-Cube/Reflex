@@ -1,0 +1,57 @@
+.analytics-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.analytics-container h2 {
+    margin-top: 0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.stat-card {
+  background: var(--white-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-left: 5px solid var(--primary-color);
+}
+.stat-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+.stat-card p {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+.stat-card span {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.simulation-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e9ecef;
+}
+.simulation-section h3 {
+  margin-top: 0;
+}
+/* .simulate-btn {
+  background-color: var(--success-color);
+  color: var(--white-color);
+  font-size: 1rem;
+} */
+/* ... (keep layout styles) ... */
+
+.simulate-btn {
+  background-color: var(--dark-color); /* Use dark color for secondary actions */
+  color: var(--white-color);
+}
+.simulate-btn:hover {
+  background-color: var(--dark-hover-color);
+}

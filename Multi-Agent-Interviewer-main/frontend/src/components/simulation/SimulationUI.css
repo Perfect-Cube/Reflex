@@ -1,0 +1,36 @@
+.simulation-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+}
+.simulation-container h1 {
+    flex-shrink: 0;
+}
+.simulation-container .chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.simulation-container .chat-window {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+.typing-indicator {
+  text-align: center;
+  color: var(--secondary-color);
+  padding: 1rem;
+  font-style: italic;
+  background: var(--white-color);
+  border-top: 1px solid #eee;
+}

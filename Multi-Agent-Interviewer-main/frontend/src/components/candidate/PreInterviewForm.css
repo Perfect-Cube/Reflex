@@ -1,0 +1,33 @@
+/* candidate/PreInterviewForm.css */
+.pre-interview-form {
+  max-width: 500px;
+  width: 100%;
+}
+.pre-interview-form h2 {
+  text-align: center;
+  margin-top: 0;
+}
+.pre-interview-form p {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.form-submit-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+}

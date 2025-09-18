@@ -1,0 +1,21 @@
+/* common/Header.css */
+.app-header {
+  background-color: var(--white-color);
+  padding: 1rem 2.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eef2f6;
+}
+.logo-img {
+  height: 40px;
+  cursor: pointer;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--dark-color);
+}
+/* The logout button uses global .action-btn and .btn-primary styles */

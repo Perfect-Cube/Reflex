@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-dotenv
+pydantic-settings
+pyautogen
+groq
+opencv-python-headless
+numpy
+websockets
+redis
+aiofiles
+ag2[openai]

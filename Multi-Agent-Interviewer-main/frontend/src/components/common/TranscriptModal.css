@@ -1,0 +1,77 @@
+/* common/TranscriptModal.css */
+.transcript-modal {
+  max-width: 750px;
+  width: 90%;
+  height: 80vh; /* Set a fixed height */
+  padding: 0; /* Remove padding from the main card */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Hide scrollbars on the main card */
+  border-top: 5px solid var(--primary-color);
+}
+
+/* --- FROSTED GLASS HEADER --- */
+.modal-header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0; /* Prevent header from shrinking */
+  
+  /* The Magic */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-header h2 {
+  margin: 0;
+  color: var(--dark-color);
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+/* --- SCROLLABLE BODY --- */
+.modal-body {
+  flex-grow: 1; /* Allow body to fill available space */
+  overflow-y: auto; /* Make ONLY the body scrollable */
+  padding: 1.5rem 2rem;
+  background-color: var(--white-color); /* Solid background for readability */
+}
+
+/* --- FROSTED GLASS FOOTER --- */
+.modal-footer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-shrink: 0; /* Prevent footer from shrinking */
+
+  /* The Magic */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Transcript item styling (no changes needed) */
+.transcript-item { margin-bottom: 1rem; }
+.transcript-item .speaker { font-weight: bold; }
+.transcript-item.ai .speaker { color: var(--primary-color); }
+.transcript-item.user .speaker { color: var(--success-color); }
+.transcript-item.report .speaker { color: var(--dark-color); }
+.transcript-item p {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  background: #f8f9fa;
+}
+.transcript-item p.highlight {
+  background-color: #fffbe6;
+  border-left: 4px solid var(--warning-color);
+}

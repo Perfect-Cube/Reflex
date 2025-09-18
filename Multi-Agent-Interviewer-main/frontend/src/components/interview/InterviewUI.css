@@ -1,0 +1,130 @@
+/* interview/InterviewUI.css */
+.interview-container {
+  display: flex;
+  height: 100vh;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+.proctor-view {
+  flex: 1;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.proctor-view h2 {
+  margin-top: 0;
+  color: var(--dark-color);
+}
+
+.camera-feed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #1e2124;
+  border-radius: var(--border-radius);
+  color: #6c757d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+.proctor-status, .proctor-warnings, .worksheet-action {
+  background-color: var(--white-color);
+  border: 1px solid #eef2f6;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.proctor-status.active p {
+  color: var(--success-color);
+  font-weight: bold;
+}
+.proctor-status.terminated p {
+  color: var(--danger-color);
+  font-weight: bold;
+}
+
+.chat-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.chat-window {
+  flex-grow: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  /* ADDED: This makes the chat window a flex container for its children (the messages) */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- THE KEY CHANGE FOR BUBBLE SIZING AND ALIGNMENT --- */
+
+.message {
+  /* This is the container for the bubble. It's now a flex *item* inside chat-window */
+  margin-bottom: 1rem;
+  max-width: 80%; /* Constrains long messages */
+  align-self: flex-start; /* Default alignment for AI messages (left) */
+}
+
+.user-message {
+  /* This overrides the default alignment for user messages */
+  align-self: flex-end; /* Pushes the entire message block to the right */
+}
+
+.message-content {
+  /* This is the visible chat bubble with the background color */
+  display: inline-block; /* CRITICAL: Makes the background hug the text content */
+  padding: 12px 20px;
+  border-radius: 20px;
+  line-height: 1.5;
+  text-align: left; /* Ensures text is left-aligned within the bubble */
+}
+
+/* --- END OF KEY CHANGE --- */
+
+.user-message .message-content {
+  background-image: linear-gradient(45deg, #ff8c42, #fa7328);
+  color: var(--white-color);
+  border-bottom-right-radius: 5px; /* Aesthetic touch */
+}
+
+.ai-message .message-content {
+  background: #e5e9f2;
+  color: var(--dark-color);
+  border-bottom-left-radius: 5px; /* Aesthetic touch */
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eef2f6;
+  background-color: var(--white-color);
+  align-items: center;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.chat-input input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(250, 115, 40, 0.2);
+}
